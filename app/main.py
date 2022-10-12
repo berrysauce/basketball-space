@@ -175,7 +175,7 @@ def get_root(request: Request):
     if DRIBBBLE_TOKEN == "None":
         raise HTTPException(
             status_code=500,
-            detail="Dribbble Token is not set in your Space App's Config (more about this here: https://github.com/berrysauce/basketball-space/blob/main/HELP.md)",
+            detail="Dribbble Token is not set in your Space App's Config (more about this here: https://github.com/berrysauce/basketball-space/blob/master/HELP.md)",
         )
 
     shots_html = get_shot_grid()

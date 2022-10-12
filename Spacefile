@@ -9,7 +9,7 @@ micros:
       presets:
         env:
         - name: DRIBBBLE_TOKEN
-          description: "[REQUIRED] Generate this Token at https://auth.usebasketball.com - Read more here: https://github.com/berrysauce/basketball-space/blob/main/HELP.md"
+          description: "[REQUIRED] Generate this Token at https://auth.usebasketball.com - Read more here: https://github.com/berrysauce/basketball-space/blob/master/HELP.md"
           default: "None"
       public_routes:
         - "/*"
