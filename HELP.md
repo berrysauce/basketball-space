@@ -5,7 +5,7 @@ You need this token so Basketball can request your shots and profile data from D
 
 ### 2. Deploy Basketball on Deta Space
 
-Now deploy Basketball on Deta Space. Then, click on the tree dots on your apps icon. This will open the config menu. 
+Now deploy Basketball on Deta Space. Then, click on the three dots on your apps icon. This will open the config menu. 
 
 <img alt="Deployment Step 1" src="http://cdn.berrysauce.me/basketball/docs/step1.png">
 

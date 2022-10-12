@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ name }}</title>
+    <meta name="description" content="{{ bio }}">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body style="font-family: Inter, sans-serif;">
+    <section class="highlight-clean" style="margin-top: 10vh;background: rgba(255,255,255,0);">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center" style="font-size: 20;margin-bottom: 0px;color: rgb(0,0,0);">🏀 Setting up Basketball</h2>
+                <p class="text-left" style="margin-bottom: 30px;">
+                    <strong>1. Generate your Dribbble Token</strong><br>
+                    You need this token so Basketball can request your shots and profile data from Dribbble. Getting this token is not so straight forward, so I made <a href="https://auth.usebasketball.com/">auth.usebasketball.com</a>. It's easy to use, so just follow the steps and return to this page when you're done.<br><br>
+
+                    <strong>2. Deploy Basketball on Deta Space</strong><br>
+
+                    Now, click on the three dots on your apps icon. This will open the config menu. 
+
+                    <img style="margin: 25px 0px; border-radius: 5px; width: 100%;" alt="Deployment Step 1" src="http://cdn.berrysauce.me/basketball/docs/step1.png">
+
+                    In here, enter the token you've generated in Step 1. Then, click on the "Save Changes" button.
+
+                    <img style="margin: 25px 0px; border-radius: 5px; width: 100%;" alt="Deployment Step 2" src="http://cdn.berrysauce.me/basketball/docs/step2.png">
+
+                    Now, when you visit your instance, it should show your Dribbble profile.<br><br>
+
+                    🎉 <strong>Done!</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+</body>
+
+</html>

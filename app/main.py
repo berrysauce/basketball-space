@@ -1,3 +1,4 @@
+from pipes import Template
 import uvicorn
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import HTMLResponse, RedirectResponse
@@ -153,10 +154,7 @@ def get_root(request: Request):
     """
 
     if DRIBBBLE_TOKEN == "None":
-        raise HTTPException(
-            status_code="Error",
-            detail="Dribbble Token is not set in your Space App's Config (more about this here: https://github.com/berrysauce/basketball-space/blob/master/HELP.md)",
-        )
+        return templates.TemplateResponse("setup.html", {"request": request})
 
     shots_html = get_shot_grid()
     data, links_html = get_profile_data()
