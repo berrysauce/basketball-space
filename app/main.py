@@ -23,30 +23,10 @@ from deta import Deta
 """
 
 # LOAD ENV
-print("[...] Loading .env values")
-try:
-    load_dotenv()
-    DRIBBBLE_TOKEN = str(os.getenv("DRIBBBLE_TOKEN"))
-    APP_HOST = "localhost"
-    APP_PORT = 8000
-    CACHE_EXPIRY = 300
-
-    if DRIBBBLE_TOKEN == "None":
-        print("[ ! ] Dribbble Token not in .env \n..... See how to get it in the docs")
-    if APP_HOST == "None":
-        print("[ ! ] Host not in .env \n..... defaulting to localhost")
-        APP_HOST = "localhost"
-    if APP_PORT == None:
-        print("[ ! ] Port not in .env \n..... defaulting to 8000")
-        APP_PORT = 8000
-    if CACHE_EXPIRY == None:
-        print("[ ! ] CACHE_EXPIRY not in .env \n..... defaulting to 3600")
-        CACHE_EXPIRY = 3600
-except:
-    print(
-        "[-!-] Failed to load .env \n..... Make sure you've created a .env and filled it with the correct information"
-    )
-    sys.exit(1)
+DRIBBBLE_TOKEN = str(os.getenv("DRIBBBLE_TOKEN"))
+APP_HOST = "localhost"
+APP_PORT = 8000
+CACHE_EXPIRY = 300
 
 # INITIALIZE APP
 app = FastAPI(docs_url=None, redoc_url=None)
@@ -227,20 +207,5 @@ async def my_custom_exception_handler(request: Request, exc: StarletteHTTPExcept
 
 
 if __name__ == "__main__":
-    print(
-        """
-
-    ____            _        _   _           _ _ 
-    | __ )  __ _ ___| | _____| |_| |__   __ _| | |
-    |  _ \ / _` / __| |/ / _ \ __| '_ \ / _` | | |
-    | |_) | (_| \__ \   <  __/ |_| |_) | (_| | | |
-    |____/ \__,_|___/_|\_\___|\__|_.__/ \__,_|_|_|
-    [ by berrysauce                Version 0.2.X ]
-
-    """
-    )
-    print(
-        f"[ √ ] Starting Server \n..... at {APP_HOST}:{APP_PORT} \n..... with CACHE_EXPIRY {CACHE_EXPIRY}"
-    )
     # converting APP_PORT to int here to not interfere with .env reading check (try/except)
     uvicorn.run(app, host=APP_HOST, port=int(APP_PORT))
