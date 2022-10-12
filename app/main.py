@@ -29,7 +29,7 @@ try:
     DRIBBBLE_TOKEN = str(os.getenv("DRIBBBLE_TOKEN"))
     APP_HOST = "localhost"
     APP_PORT = 8000
-    CACHE_EXPIRY = 3600
+    CACHE_EXPIRY = 300
 
     if DRIBBBLE_TOKEN == "None":
         print("[ ! ] Dribbble Token not in .env \n..... See how to get it in the docs")
@@ -174,7 +174,7 @@ def get_root(request: Request):
 
     if DRIBBBLE_TOKEN == "None":
         raise HTTPException(
-            status_code=500,
+            status_code="Error",
             detail="Dribbble Token is not set in your Space App's Config (more about this here: https://github.com/berrysauce/basketball-space/blob/master/HELP.md)",
         )
 
