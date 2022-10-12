@@ -1,0 +1,8 @@
+uvicorn
+requests
+fastapi
+python-dotenv
+aiofiles
+jinja2
+beautifulsoup4
+deta

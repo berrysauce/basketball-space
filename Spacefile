@@ -1,0 +1,15 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 1
+icon: ./icon.png
+micros:
+    - name: basketball
+      src: ./app/
+      engine: python3.9
+      primary: true
+      presets:
+        env:
+        - name: DRIBBBLE_TOKEN
+          description: "[REQUIRED] Generate this Token at https://auth.usebasketball.com - Read more here: https://github.com/berrysauce/basketball-space/blob/main/HELP.md"
+          default: "None"
+      public_routes:
+        - "/*"
